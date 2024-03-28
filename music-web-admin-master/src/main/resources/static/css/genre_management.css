@@ -1,0 +1,65 @@
+/* 样式代码，可以根据需要进行修改 */
+#classificationTabs {
+    display: flex;
+    background-color: #4caf50;
+    margin: 10px 0;
+    padding: 10px;
+    /*border-radius: 5px;*/
+}
+
+#classificationTabs button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+#songContainer {
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.song {
+    height: 47%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: calc(20% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.song img {
+    width: 100%; /* 图片占满父容器 */
+    /*height: 100%; !* 自适应高度 *!*/
+    max-height: 200px; /* 限制最大高度 */
+    object-fit: cover; /* 保持图片比例且填满容器 */
+    margin-bottom: 10px;
+}
+
+#pagination {
+    margin-top: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#pagination button {
+    /*background-color: #4caf50;*/
+    /*color: #ffffff;*/
+    border: none;
+    /*padding: 10px;*/
+    margin: 5px;
+    margin-right: 10px !important;
+    cursor: pointer;
+    /*border-radius: 3px;*/
+}
+
+#pagination button:hover {
+    background-color: #45a049;
+}

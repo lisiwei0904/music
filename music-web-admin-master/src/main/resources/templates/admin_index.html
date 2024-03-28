@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('后台管理首页')">
+</head>
+
+<body>
+<div th:include="admin-navbar::navNav" class="navbar"></div>
+<div class="container">
+    <div class="adminindexContainer">
+        <div class="adminindex">
+            <h1>欢迎来到后台管理</h1>
+            <p>这里是您的管理中心，尽情探索吧！</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

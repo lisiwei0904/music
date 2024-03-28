@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('用户管理')"></head>
+
+<body>
+<div th:include="admin-navbar::navNav" class="navbar"></div>
+<div class="container">
+    <div class="adminUser">
+        <!-- 添加搜索框和按钮 -->
+        <div>
+            <label for="searchInput">搜索用户:</label>
+            <input type="text" id="searchInput" placeholder="输入用户名">
+            <button id="searchButton" onclick="searchUsers()">搜索</button>
+        </div>
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>用户名</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+        </table>
+    </div>
+</div>
+<div id="userModal">
+    <div id="modalContent"></div>
+    <button id="hideModalButton" onclick="hideModal()">关闭</button>
+</div>
+
+<script th:src="@{/static/js/admin_user.js}"></script>
+</body>
+</html>

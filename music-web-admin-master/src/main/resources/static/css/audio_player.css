@@ -1,0 +1,108 @@
+.audio-player-container {
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#songTitle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.music-controls button {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.volume-control {
+    width: 100% !important;
+    margin-top: 10px;
+}
+
+.lyrics-display {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.progress-container {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100% !important;
+}
+
+.progress-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#currentTime, #duration {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#toggleLyricsBtn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.song-description {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.song-description h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.song-description p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.audio-player {
+    width: 300px;
+    margin-left: 100px;
+}

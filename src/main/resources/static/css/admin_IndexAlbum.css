@@ -1,0 +1,74 @@
+.uploadIndexImg {
+    margin-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.uploadIndexImg input[type="file"] {
+    border: 2px solid #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 250px
+}
+
+.uploadIndexImg input[type="file"]:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.uploadIndexImg button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.uploadIndexImg h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 70px;
+}
+
+.modifyAlbumName {
+    margin-top: 30px;
+}
+
+.modifyAlbumName label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.modifyAlbumName input {
+    padding: 8px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modifyAlbumName button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

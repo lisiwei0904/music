@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('分类管理')"></head>
+
+<body>
+<div th:include="admin-navbar::navNav" class="navbar"></div>
+<div class="container">
+    <div class="column-container">
+        <div class="genre-column" id="popColumn">
+            <h2>流行</h2>
+            <!-- 流行音乐内容放在这里 -->
+        </div>
+        <div id="popColumn-pagination" class="pagination-container">1</div>
+    </div>
+    <div class="column-container">
+        <div class="genre-column" id="rockColumn">
+            <h2>摇滚</h2>
+            <!-- 摇滚音乐内容放在这里 -->
+        </div>
+        <div id="rockColumn-pagination" class="pagination-container">2</div>
+    </div>
+    <div class="column-container">
+        <div class="genre-column" id="hiphopColumn">
+            <h2>嘻哈</h2>
+            <!-- 嘻哈音乐内容放在这里 -->
+        </div>
+        <div id="hiphopColumn-pagination" class="pagination-container">3</div>
+    </div>
+    <div class="column-container">
+        <div class="genre-column" id="instrumentalColumn">
+            <h2>器乐</h2>
+            <!-- 器乐音乐内容放在这里 -->
+        </div>
+        <div id="instrumentalColumn-pagination" class="pagination-container">4</div>
+    </div>
+    <div class="column-container">
+        <div class="genre-column" id="balladColumn">
+            <h2>民谣</h2>
+            <!-- 民谣音乐内容放在这里 -->
+        </div>
+        <div id="balladColumn-pagination" class="pagination-container">5</div>
+    </div>
+
+    <script th:src="@{/static/js/admin_classify.js}"></script>
+</div>
+</body>
+</html>

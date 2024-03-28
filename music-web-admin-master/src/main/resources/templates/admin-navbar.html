@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="adminHeader(title)">
+  <title th:text="${title}"></title>
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin-common.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_IndexAlbum.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_classify.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_add.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_feedback.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_user.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_index.css}" />
+  <script th:src="@{/static/js/admin-router.js}"></script>
+  <script th:src="@{/static/js/adminLogout.js}"></script>
+</head>
+<body>
+<div th:fragment="navNav" class="navbar">
+  <nav>
+    <h2 class="title">simple love</h2>
+    <ul>
+      <li><a th:href="@{/admin_index}" th:text="首页"></a></li>
+      <li><a th:href="@{/admin_IndexAlbum}" th:text="专辑管理"></a></li>
+      <li><a th:href="@{/admin_classify}" th:text="分类管理"></a></li>
+      <li><a th:href="@{/admin_addMusic}" th:text="添加音乐"></a></li>
+      <li><a th:href="@{/admin_feedback}" th:text="留言查看"></a></li>
+      <li><a th:href="@{/admin_user}" th:text="用户管理"></a></li>
+    </ul>
+    <button id="adminLogout" onclick="adminLogout()" class="logout-button">退出</button>
+
+  </nav>
+</div>
+
+
+</body>
+</html>

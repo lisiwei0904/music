@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonHeader(title)">
+    <title th:text="${title}"></title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/body.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/common.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/carousel.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/index_list.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/genre_management.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/audio_player.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/user.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/freeback.css}" />
+
+    <script th:src="@{/static/js/userAjax.js}"></script>
+    <script th:src="@{/static/js/routerView.js}"></script>
+    <script th:src="@{/static/js/modal.js}"></script>
+    <script th:src="@{/static/js/userAction.js}"></script>
+    <script th:src="@{/static/js/search.js}"></script>
+</head>
+<body>
+<div th:fragment="commonNav">
+    <div class="container">
+        <div class="title">
+            <div class="icon"><img src="/img/icon.png" alt="" srcset=""></div>
+            <div class="text">简爱音乐网</div>
+        </div>
+
+        <ul class="nav">
+            <li><a th:href="@{/index}">首页</a></li>
+            <li><a th:href="@{/genre_management}">歌曲分类</a></li>
+            <li><a th:href="@{/user_center}">个人中心</a></li>
+            <li><a th:href="@{/feedback}">留言反馈</a></li>
+        </ul>
+
+        <div class="search-login">
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" placeholder="请输入完整歌名..." id="searchInput">
+                </div>
+                <div class="search-icon"><img src="/img/search.png" onclick="searchSong()"></div>
+            </div>
+
+            <div class="loginBtn" id="login" onclick="showLoginModal('loginModal')">登录</div>
+            <div class="username">用户名</div>
+            <div class="logoutBtn" id="logout" onclick="logout()">退出</div>
+            <!-- 新增注册按钮 -->
+            <div class="registerBtn" onclick="showRegisterModal('registerModal')">注册</div>
+        </div>
+    </div>
+
+    <!-- 登录弹窗 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>登录</h2>
+            <form>
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">登录</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册弹窗 -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>注册</h2>
+            <form>
+                <label for="registerEmail">邮箱:</label>
+                <input type="email" id="registerEmail" name="registerEmail" required>
+
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="registerPassword">密码:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
+
+                <label for="confirmPassword">确认密码:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="button" onclick="register()">注册</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer th:fragment="commonFooter">
+    <div class="footer">simple but not simple, love to be with you and me!
+        <div class="adminButton" onclick="entryadmin()">后台管理</div>
+    </div>
+</footer>
+</body>
+</html>

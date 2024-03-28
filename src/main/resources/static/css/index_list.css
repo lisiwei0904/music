@@ -1,0 +1,180 @@
+.musicListContainer {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.music-player {
+    text-align: center;
+    width: 100%;
+}
+
+/* 播放和暂停按钮 */
+.music-player button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.music-player button:hover {
+    background-color: #45a049;
+}
+
+
+/* 进度条 */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;
+    background: #f2f2f2;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+/* 音量条 */
+.music-player input[type="range"] {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 5px;
+    border-radius: 2.5px;
+    background: #f2f2f2;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.music-player input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+.music-player input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+#musicList {
+    width: 60%;
+    margin: 0 auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    height: 300px;
+}
+
+#musicList div {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+#musicList div:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+#musicList div p, #musicList div div button {
+    padding: 0 10px;
+    margin: 0;
+    line-height: 60px;
+}
+
+#musicList div p {
+    flex: 1;
+    font-weight: bold;
+}
+
+#musicList div div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#musicList div div button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#musicList div div button:hover {
+    background-color: #45a049;
+}
+
+/*歌词*/
+#lyricsDisplay {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 250px; /* 设置最大高度 */
+    overflow-y: auto; /* 添加垂直滚动条 */
+    display: none; /* 初始状态隐藏 */
+    background-color: white;
+    cursor: pointer;
+}
+
+/*分页器*/
+.pagination {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.pagination li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/*进度条*/
+.progress-container1 {
+    width: 60%;
+    margin: 0 auto;
+    /*background-color: #f2f2f2;*/
+}
+
+#progressBar {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0;
+}

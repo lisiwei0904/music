@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::commonHeader('专辑详情')">
+</head>
+<body>
+    <div th:include="common::commonNav"></div>
+        <div class="musicListContainer">
+            <!--            <div id="aplayer" class="aplayer" data-autoplay="true"  data-id="5208409284" data-server="netease" data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>-->
+            <div class="music-player">
+                <h2 id="songTitle">晴天-周杰伦</h2>
+                <audio id="audioPlayer" src="musicPath"></audio>
+                <div>
+                    <button onclick="audioPlayerMusic()">播放</button>
+                    <button onclick="pauseMusic()">暂停</button>
+                </div>
+                <input type="range" min="0" max="100" value="50" oninput="changeVolume(this.value)">
+                <div id="lyricsDisplay"></div>
+                <div class="progress-container1">
+                    <input type="range" min="0" max="100" value="0" class="progress-bar" oninput="changeProgress(this.value)">
+                </div>
+                <div class="progress-time">
+                    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                </div>
+                <div>
+                    <button id="toggleLyricsBtn">展开/收起歌词</button>
+                </div>
+            </div>
+            <div id="musicList">
+                <!-- 这里将通过 JavaScript 动态渲染音乐播放列表 -->
+            </div>
+            <ul class="pagination" id="pagination"></ul>
+        </div>
+    <div th:include="common::commonFooter"></div>
+    <script th:src="@{/static/js/indexList.js}"></script>
+</body>
+</html>

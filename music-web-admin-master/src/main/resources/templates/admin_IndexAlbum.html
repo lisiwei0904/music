@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('首页专辑管理')"></head>
+
+<body>
+<div th:include="admin-navbar::navNav" class="navbar"></div>
+<div class="container">
+    <div class="uploadIndexImg">
+        <h2>修改首页专辑图片</h2>
+        <input type="file" id="fileInput1" accept="image/png">
+        <button onclick="uploadFile(1)">上传图片1</button>
+        <br>
+        <input type="file" id="fileInput2" accept="image/png">
+        <button onclick="uploadFile(2)">上传图片2</button>
+        <br>
+        <input type="file" id="fileInput3" accept="image/png">
+        <button onclick="uploadFile(3)">上传图片3</button>
+        <br>
+        <input type="file" id="fileInput4" accept="image/png">
+        <button onclick="uploadFile(4)">上传图片4</button>
+
+        <br>
+        <div class="modifyAlbumName">
+            <h2>修改专辑名</h2>
+
+            <label for="albumId">专辑ID：</label>
+            <input type="number" id="albumId" placeholder="请输入专辑ID">
+
+            <label for="modifiedAlbumName">修改后的专辑名：</label>
+            <input type="text" id="modifiedAlbumName" placeholder="请输入修改后的专辑名">
+
+            <button onclick="modifyAlbumName()">修改专辑名</button>
+        </div>
+
+    </div>
+</div>
+<script th:src="@{/static/js/admin_IndexAlbum.js}"></script>
+</body>
+</html>

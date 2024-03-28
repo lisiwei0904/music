@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::commonHeader('留言反馈')">
+</head>
+<body>
+<div th:include="common::commonNav"></div>
+<div class="feedbackContainer">
+    <form id="feedbackForm">
+        <label for="feedbackMessage">留言内容:</label>
+        <textarea id="feedbackMessage" name="feedbackMessage" rows="4" required placeholder="Thanks for the feedback..."></textarea>
+
+        <button type="button" onclick="submitFeedback()">OK</button>
+    </form>
+
+</div>
+
+<div th:include="common::commonFooter"></div>
+
+<script th:src="@{/static/js/feedback.js}"></script>
+</body>
+</html>

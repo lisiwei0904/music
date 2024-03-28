@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('添加音乐')"></head>
+
+<body>
+<div th:include="admin-navbar::navNav"  class="navbar"></div>
+<div class="container">
+    <div class="addSong">
+        <h2>添加音乐</h2>
+        <form id="addMusicForm" enctype="multipart/form-data">
+            <label for="songName">歌曲名称:</label>
+            <input type="text" id="songName" name="songName" required><br>
+
+            <label for="artist">艺术家:</label>
+            <input type="text" id="artist" name="artist" required><br>
+
+            <label for="releaseDate">发行日期:</label>
+            <input type="date" id="releaseDate" name="releaseDate" required><br>
+
+            <label for="introduction">介绍:</label>
+            <textarea id="introduction" name="introduction" required></textarea><br>
+
+            <label for="album">专辑:</label>
+            <input type="text" id="album" name="album" required><br>
+
+            <label for="classify">分类:</label>
+            <input type="text" id="classify" name="classify" required><br>
+
+            <label for="language">语言:</label>
+            <input type="text" id="language" name="language" required><br>
+
+            <label for="mp3File">MP3文件:</label>
+            <input type="file" id="mp3File" name="mp3File" accept=".mp3" required><br>
+
+            <label for="lrcFile">LRC文件:</label>
+            <input type="file" id="lrcFile" name="lrcFile" accept=".lrc" required><br>
+
+            <label for="imageFile">图片文件:</label>
+            <input type="file" id="imageFile" name="imageFile" accept=".png, .jpg, .jpeg" required><br>
+
+            <button type="button" onclick="addMusic()">添加音乐</button>
+        </form>
+    </div>
+</div>
+<script th:src="@{/static/js/adminAddMusic.js}"></script>
+</body>
+</html>

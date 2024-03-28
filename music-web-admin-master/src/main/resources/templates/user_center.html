@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::commonHeader('个人中心')">
+</head>
+<body>
+<div th:include="common::commonNav"></div>
+<div id="personalCenterContainer" class="personalCenterContainer">
+    <div id="userProfile" class="userProfile">
+        <img class="avatar" src="" alt="用户头像">
+        <h2 class="userName">用户名称</h2>
+        <p class="Email">邮箱：user@example.com</p>
+
+        <!-- 修改头像的按钮和文件输入框 -->
+        <button id="uploadBtn">修改头像</button>
+        <input type="file" id="fileInput" style="display: none;">
+    </div>
+    <div id="musicList" style="width: 100%; overflow-y: auto;height: 370px">
+        <!-- 这里将通过 JavaScript 动态渲染音乐播放列表 -->
+    </div>
+    <ul class="pagination" id="pagination"></ul>
+</div>
+<div th:include="common::commonFooter"></div>
+
+<script th:src="@{/static/js/user.js}"></script>
+</body>
+</html>

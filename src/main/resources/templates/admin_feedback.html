@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin-navbar::adminHeader('留言管理')"></head>
+
+<body>
+<div th:include="admin-navbar::navNav"  class="navbar"></div>
+<div class="container">
+    <div class="adminFeedBack">
+        <table border="1">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>内容</th>
+                <th>留言时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="messageTableBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script th:src="@{/static/js/admin_feedback.js}"></script>
+
+</body>
+</html>

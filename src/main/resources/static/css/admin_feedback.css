@@ -1,0 +1,39 @@
+.adminFeedBack {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.adminFeedBack table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.adminFeedBack th, .adminFeedBack td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.adminFeedBack th {
+    background-color: #f2f2f2;
+}
+
+.adminFeedBack button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.adminFeedBack button:hover {
+    background-color: #45a049;
+}

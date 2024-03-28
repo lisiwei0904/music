@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::commonHeader('首页')">
+</head>
+<body>
+    <div th:include="common::commonNav"></div>
+    <div class="img1">
+        <!-- 左侧按钮 -->
+        <a href="javascript:;"style="text-decoration:none" class="left"></a>
+        <!-- 右侧按钮 -->
+        <a href="javascript:;"style="text-decoration:none" class="right"></a>
+        <ul class="lunbotu">
+            <!-- 数组切片获取 -->
+            <li class="li1"><img class="swiperimg" src="http://localhost/img/swiper1.png"></li>
+            <li class="li2"><img class="swiperimg" src="http://localhost/img/swiper2.png"></li>
+            <li class="li3"><img class="swiperimg" src="http://localhost/img/swiper3.png"></li>
+            <li class="li4"><img class="swiperimg" src="http://localhost/img/swiper4.png"></li>
+        </ul>
+        <div class="rights"></div>
+        <div class="lefts"></div>
+    </div>
+    <div class="dot2">
+        <ul>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
+    </div>
+    <div th:include="common::commonFooter"></div>
+    <script th:src="@{/static/js/index.js}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::commonHeader('歌曲分类')">
+</head>
+<body>
+<div th:include="common::commonNav"></div>
+<div id="songClassifications">
+    <div id="classificationTabs">
+        <button onclick="changeClassification('Pop')">流行</button>
+        <button onclick="changeClassification('Rock')">摇滚</button>
+        <button onclick="changeClassification('Hiphop')">嘻哈</button>
+        <button onclick="changeClassification('Instrumental')">器乐</button>
+        <button onclick="changeClassification('Ballad')">民谣</button>
+    </div>
+
+    <div id="songContainer"></div>
+    <div id="pagination"></div>
+</div>
+<div th:include="common::commonFooter"></div>
+<script th:src="@{/static/js/genreManagement.js}"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.adminindexContainer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.adminindex {
+    background: linear-gradient(to right, #4CAF50, #2E8B57); /* 使用渐变背景色 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    margin-bottom: 50px;
+}
+
+.adminindex h1 {
+    color: #ecf0f1;
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out 0.5s forwards;
+}
+
+.adminindex p {
+    color: #ecf0f1;
+    font-size: 24px;
+    animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
